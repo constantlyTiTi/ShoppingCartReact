@@ -20,12 +20,12 @@ namespace ShoppingCart.Controllers
     public class ItemController : ControllerBase
     {
         private readonly IMapper _mapper;
-        private readonly IAmazonS3 _amazonS3;
+        //private readonly IAmazonS3 _amazonS3;
         private readonly IUnitOfWork _unitOfWork;
 
-        public ItemController(IMapper mapper, IAmazonS3 amazonS3, IUnitOfWork unitOfWork)
+        public ItemController(IMapper mapper, IUnitOfWork unitOfWork)
         {
-            _amazonS3 = amazonS3;
+            //_amazonS3 = amazonS3;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }

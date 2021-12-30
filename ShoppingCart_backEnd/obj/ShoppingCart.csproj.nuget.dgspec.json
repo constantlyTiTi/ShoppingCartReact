@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart\\ShoppingCart.csproj": {}
+    "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart_React\\ShoppingCart_backEnd\\ShoppingCart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart\\ShoppingCart.csproj": {
+    "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart_React\\ShoppingCart_backEnd\\ShoppingCart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart\\ShoppingCart.csproj",
+        "projectUniqueName": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart_React\\ShoppingCart_backEnd\\ShoppingCart.csproj",
         "projectName": "ShoppingCart",
-        "projectPath": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart\\ShoppingCart.csproj",
+        "projectPath": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart_React\\ShoppingCart_backEnd\\ShoppingCart.csproj",
         "packagesPath": "C:\\Users\\123\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart\\obj\\",
+        "outputPath": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart_React\\ShoppingCart_backEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\123\\AppData\\Roaming\\NuGet\\NuGet.Config",

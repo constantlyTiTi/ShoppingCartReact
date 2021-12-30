@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "om4R+3jUPf1Y8ieEPDPsyJBcPcC+ffUEH4CxNWD5Fhd40O9neHWPrpJTszuqd62UO0f/lbw8e/qTiuM6P8ePTw==",
+  "dgSpecHash": "8dr0bGjMDJQSGLo29Kxl5NYT6RREehqeWNlKfIiG/gF6U7Xt/pBVYeHY5TB8YcZC5KEEE+LDY0Cv+og0zwuqWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart\\ShoppingCart.csproj",
+  "projectFilePath": "C:\\Users\\123\\Desktop\\Course\\Personal Project\\ShoppingCart_React\\ShoppingCart_backEnd\\ShoppingCart.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\123\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\123\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
