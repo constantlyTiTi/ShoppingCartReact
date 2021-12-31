@@ -87,3 +87,6 @@ const athenSlice = createSlice({
 		})
     }
 })
+
+export const {setUser} = athenSlice.actions 
+export const userReducer =  athenSlice.reducer

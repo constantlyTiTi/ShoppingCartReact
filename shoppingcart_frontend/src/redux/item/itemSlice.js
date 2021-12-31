@@ -39,4 +39,4 @@ const itemSlice = createSlice({
 })
 
 export const {itemAction} = itemSlice.actions 
-export default itemSlice.reducer
+export const itemReducer =  itemSlice.reducer
