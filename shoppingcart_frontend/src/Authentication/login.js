@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react"
 import { Form, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
-import {login} from '../auth/AuthenSlice'
+import {login} from '../redux/auth/AuthenSlice'
 
-let login = () => {
-
+const Login = () => {
     const [state, setState] = useState({ user: {}, errors: [] });
-
     const dispatch = useDispatch();
     const { user, token, errors } = useSelector(state => state.user)
 
@@ -66,3 +64,5 @@ let login = () => {
     )
 
 }
+
+export default Login

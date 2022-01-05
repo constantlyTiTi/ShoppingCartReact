@@ -19,7 +19,7 @@ export const login = createAsyncThunk(
         return response;
     }
 
-);
+)
 
 export const register = createAsyncThunk(
     'auth/register',
@@ -39,7 +39,7 @@ export const register = createAsyncThunk(
         return response;
     }
 
-);
+)
 
 const athenSlice = createSlice({
     name:'authication',
@@ -54,28 +54,28 @@ const athenSlice = createSlice({
             state.user = action.payload
         }
     },
-    extraReducers: (builder) =>{
-        builder.addCase(register.fulfilled, (state, action) => {
-			// Add user to the state array
-			state.user = action.payload.data
-			state.token = action.payload.data.token
-			state.loading = false
-			state.errors = initialState.errors
-		}),
-		builder.addCase(register.rejected, (state, action) => {
-			// Add user to the state array
-			state.errors = action.payload.data.errors
-			state.loading = false
-		}),
-		builder.addCase(register.pending, (state) => {
-			// Add user to the state array
-			state.loading = true
-		}),
+    extraReducers: (builder) =>(
+        // builder.addCase(register.fulfilled, (state, action) => {
+		// 	// Add user to the state array
+		// 	state.user = action.payload.data
+		// 	state.token = action.payload.data.token
+		// 	state.loading = false
+		// 	state.errors = []
+		// }),
+		// builder.addCase(register.rejected, (state, action) => {
+		// 	// Add user to the state array
+		// 	state.errors = action.payload.data.errors
+		// 	state.loading = false
+		// }),
+		// builder.addCase(register.pending, (state) => {
+		// 	// Add user to the state array
+		// 	state.loading = true
+		// }),
 		builder.addCase(login.fulfilled, (state, action) => {
 			state.user = action.payload.data
 			state.token = action.payload.data.token
 			state.loading = false
-			state.errors = initialState.errors
+			state.errors = []
 		}),
 		builder.addCase(login.pending, (state) => {
 			state.loading = true
@@ -85,7 +85,7 @@ const athenSlice = createSlice({
 			state.errors = action.payload.data.errors
 			state.loading = false
 		})
-    }
+    )
 })
 
 export const {setUser} = athenSlice.actions 
