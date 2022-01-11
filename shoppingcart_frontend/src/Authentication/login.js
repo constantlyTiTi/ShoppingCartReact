@@ -5,19 +5,22 @@ import { useSelector, useDispatch } from "react-redux"
 import {login} from '../redux/auth/AuthenSlice'
 
 const Login = () => {
-    const [state, setState] = useState({ user: {}, errors: [] });
+    const[user, setUser] = useState({});
+
     const dispatch = useDispatch();
-    const { user, token, errors } = useSelector(state => state.user)
+    const { token, errors } = useSelector(state => state.user)
 
     function usernameOnChangeHandler(e){
-        setState({...state, user:{...user, username: e.target.value}})
-        setState({...state, errors:[]})
+        setUser({...user, username: e.target.value})
     }
 
     function passwordOnChangeHandler(e){
-        setState({...state, user:{...user, password: e.target.value}})
-        setState({...state, errors:[]})
+        setUser({...user, password: e.target.value})
     }
+
+    useEffect(()=>{
+        
+    })
 
 
     return (
@@ -54,7 +57,7 @@ const Login = () => {
                             Submit
                         </Button>
                         <Form.Text className="mx-3 text-danger">
-                            {state.errors}
+                            {errors}
                         </Form.Text>
                     </Form.Group>
                 </Form>
