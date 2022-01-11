@@ -2,25 +2,26 @@ import React, { useEffect, useState } from "react"
 import { Form, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
-import {login} from '../redux/auth/AuthenSlice'
+import {register} from '../redux/auth/AuthenSlice'
 
-const Login = () => {
-    const[user, setUser] = useState({});
-
+const Register = () => {
+    const [state, setState] = useState({ user: {}, errors: [] });
     const dispatch = useDispatch();
-    const { token, errors } = useSelector(state => state.user)
+    const { user, token, errors } = useSelector(state => state.user)
 
     function usernameOnChangeHandler(e){
-        setUser({...user, username: e.target.value})
+        setState({...state, user:{...user, username: e.target.value}})
+        setState({...state, errors:[]})
     }
 
     function passwordOnChangeHandler(e){
-        setUser({...user, password: e.target.value})
+        setState({...state, user:{...user, password: e.target.value}})
+        setState({...state, errors:[]})
     }
 
-    useEffect(()=>{
-        
-    })
+    function confirmPassordOnChangeHandler(e){
+
+    }
 
 
     return (
@@ -32,7 +33,7 @@ const Login = () => {
                         <Form.Control
                             type="email"
                             placeholder="Enter email"
-                            value={user.username}
+                            value={state.user.username}
                             onChange={usernameOnChangeHandler}
                         />
                         <Form.Text className="text-muted">
@@ -45,19 +46,29 @@ const Login = () => {
                         <Form.Control
                             type="password"
                             placeholder="Password"
-                            value={user.password}
+                            value={state.user.password}
                             onChange={passwordOnChangeHandler}
+                        />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                            type="password"
+                            placeholder="Confirm Password"
+                            value={state.user.password}
+                            onChange={confirmPassordOnChangeHandler}
                         />
                     </Form.Group>
                     <Form.Group className="d-flex">
                         {/* <Button variant="primary" type="button" onClick={login}>
 							Submit
 						</Button> */}
-                        <Button variant="primary" type="button" onClick={() => dispatch(login(user))}>
+                        <Button variant="primary" type="button" onClick={() => dispatch(register(state))}>
                             Submit
                         </Button>
                         <Form.Text className="mx-3 text-danger">
-                            {errors}
+                            {state.errors}
                         </Form.Text>
                     </Form.Group>
                 </Form>
@@ -68,4 +79,4 @@ const Login = () => {
 
 }
 
-export default Login
+export default Register

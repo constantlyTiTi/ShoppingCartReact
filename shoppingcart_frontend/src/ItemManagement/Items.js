@@ -17,6 +17,7 @@ export const items = (props) => {
                     <li className="page-item"><a className="page-link" href="#">Next</a></li>
                 </ul>
             </nav>
+            {/* {console.log(props)} */}
             {
                 props.items.items.map(i =>
                     <itemCard

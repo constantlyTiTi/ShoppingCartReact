@@ -7,6 +7,32 @@ export const getItemById= createAsyncThunk(
         const response = await axios.get(`https://localhost:44340/api/item/${itemId}`)
         .then(resp =>{return resp.data})
         .catch(error => {return error.response.data})
+        
+        if(response.status !== 200){
+            return thunkAPI.rejectWithValue(response);
+        }
+
+        return response;
+    }
+)
+
+export const postItem = createAsyncThunk(
+    'item/postItem',
+    async(item, token, thunkAPI) =>{
+        const response = await axios.post('https://localhost:44340/api​/item​/post-item',{
+           headers:{
+               token: token
+           },
+           item:item
+        })
+        .then(resp => {return resp.data})
+        .catch(error => {return error.response.data})
+
+        if(response.status !== 200){
+            return thunkAPI.rejectWithValue(response);
+        }
+
+        return response;
     }
 )
 
@@ -32,6 +58,21 @@ const itemSlice = createSlice({
         });
 
         builder.addCase(getItemById.rejected,(state,action)=>{
+            state.loading = false;
+            state.error = action.payload;
+        });
+
+        builder.addCase(postItem.fulfilled,(state,action)=>{
+            state.loading = false;
+            state.error = [];
+        });
+
+        builder.addCase(postItem.pending,(state,action)=>{
+            state.loading = true;
+            state.error = [];
+        });
+
+        builder.addCase(postItem.rejected,(state,action)=>{
             state.loading = false;
             state.error = action.payload;
         });

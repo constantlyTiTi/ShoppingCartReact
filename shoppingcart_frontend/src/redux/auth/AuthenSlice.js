@@ -44,7 +44,7 @@ export const register = createAsyncThunk(
 const athenSlice = createSlice({
     name:'authication',
     initialState:{
-        user:{},
+        userInfor:{},
         token:"",
         loading: true,
         errors:[]

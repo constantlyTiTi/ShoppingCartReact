@@ -13,6 +13,6 @@ namespace ShoppingCart.Configuration
         public string AccessKeyID { get; set; }
         public string SecretAccessKey { get; set; }
         public string ConnectionString { get; set; } = "Server=(localdb)\\mssqllocaldb;Database=ShoppingCart;Trusted_Connection=True; MultipleActiveResultSets = True;";
-        public string JwtSecretToken { get; set; } = "shoppingCartV2";
+        public string JwtSecretToken { get; set; } = "shoppingCartV2TingAspNETCore";
     }
 }
